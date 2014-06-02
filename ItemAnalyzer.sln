@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemAnalyzer.Website", "ItemAnalyzer.Website\ItemAnalyzer.Website.csproj", "{903DE9E0-20A3-443A-ACF0-12FF48FABFA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemAnalyzer.Transport", "ItemAnalyzer.Transport\ItemAnalyzer.Transport.csproj", "{13CBD102-ECD1-4221-86FB-9CA9802BCF48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{903DE9E0-20A3-443A-ACF0-12FF48FABFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{903DE9E0-20A3-443A-ACF0-12FF48FABFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{903DE9E0-20A3-443A-ACF0-12FF48FABFA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13CBD102-ECD1-4221-86FB-9CA9802BCF48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13CBD102-ECD1-4221-86FB-9CA9802BCF48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13CBD102-ECD1-4221-86FB-9CA9802BCF48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13CBD102-ECD1-4221-86FB-9CA9802BCF48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
