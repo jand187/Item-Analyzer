@@ -1,4 +1,7 @@
-﻿namespace ItemAnalyzer.Transport
+﻿using System.Linq;
+using ItemAnalyzer.Model;
+
+namespace ItemAnalyzer.Transport
 {
 	public interface IHttpTransport
 	{
@@ -14,21 +17,6 @@
 				Id = 1,
 				Name = "first page"
 			};
-		}
-	}
-
-	public class InventoryPage
-	{
-		public int Id
-		{
-			get;
-			set;
-		}
-
-		public string Name
-		{
-			get;
-			set;
 		}
 	}
 }
