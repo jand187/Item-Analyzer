@@ -127,6 +127,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ItemAnalyzer.Model\ItemAnalyzer.Model.csproj">
+      <Project>{4719b61b-0aa8-4bb6-a435-dbe73ff6939c}</Project>
+      <Name>ItemAnalyzer.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ItemAnalyzer.Transport\ItemAnalyzer.Transport.csproj">
       <Project>{13CBD102-ECD1-4221-86FB-9CA9802BCF48}</Project>
       <Name>ItemAnalyzer.Transport</Name>
