@@ -1,20 +1,21 @@
-﻿using System.Web.Http;
+﻿using System.Linq;
+using System.Web.Http;
 using ItemAnalyzer.Transport;
 
 namespace ItemAnalyzer.Website.Api
 {
 	public class UpdateController : ApiController
 	{
-		private readonly IHttpTransport _httpTransport;
+		private readonly IHttpTransport httpTransport;
 
 		public UpdateController(IHttpTransport httpTransport)
 		{
-			_httpTransport = httpTransport;
+			this.httpTransport = httpTransport;
 		}
 
 		public string GetStash()
 		{
-			return _httpTransport.GetInventory().Name;
+			return httpTransport.GetInventory().Name;
 		}
 	}
 }
