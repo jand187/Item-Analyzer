@@ -1,22 +1,29 @@
 ﻿using System.Linq;
-using ItemAnalyzer.Model;
+using System.Net;
+using ItemAnalyzer.Transport.Properties;
 
 namespace ItemAnalyzer.Transport
 {
 	public interface IHttpTransport
 	{
-		InventoryPage GetInventory();
+		string GetStashJson(string league = "Standard", int index = 0);
 	}
 
 	public class HttpTransport : IHttpTransport
 	{
-		public InventoryPage GetInventory()
+		private readonly IAuthentication authentication;
+
+		public HttpTransport(IAuthentication authentication)
 		{
-			return new InventoryPage
-			{
-				Id = 1,
-				Name = "first page"
-			};
+			this.authentication = authentication;
+		}
+
+		public string GetStashJson(string league = "Standard", int index = 0)
+		{
+			authentication.Authenticate();
+			var request = authentication.GetHttpRequest(HttpMethod.Get, string.Format(Settings.Default.StashURL, league, index));
+			var webResponse = (HttpWebResponse) request.GetResponse();
+			return webResponse.ReadAll();
 		}
 	}
 }
