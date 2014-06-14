@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ItemAnalyzer.Transport.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LoginURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.pathofexile.com/login</Value>
+    </Setting>
+    <Setting Name="CharacterURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://www.pathofexile.com/character-window/get-characters</Value>
+    </Setting>
+    <Setting Name="StashURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://www.pathofexile.com/character-window/get-stash-items?league={0}&amp;tabs=1&amp;tabIndex={1}</Value>
+    </Setting>
+    <Setting Name="InventoryURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://www.pathofexile.com/character-window/get-items?character={0}</Value>
+    </Setting>
+    <Setting Name="HashRegEx" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">name=\\\"hash\\\" value=\\\"(?&lt;hash&gt;[a-zA-Z0-9]{1,})\\\"</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
