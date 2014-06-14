@@ -69,15 +69,12 @@ namespace ItemAnalyzer.Transport.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Item Analyzer\\v.1.0\\credentials.json")]
         public string Credentials {
             get {
                 return ((string)(this["Credentials"]));
-            }
-            set {
-                this["Credentials"] = value;
             }
         }
     }
