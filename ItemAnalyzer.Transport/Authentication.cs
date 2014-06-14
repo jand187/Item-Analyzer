@@ -10,7 +10,13 @@ using Newtonsoft.Json;
 
 namespace ItemAnalyzer.Transport
 {
-	public class Authentication
+	public interface IAuthentication
+	{
+		bool Authenticate();
+		HttpWebRequest GetHttpRequest(string method, string url);
+	}
+
+	public class Authentication : IAuthentication
 	{
 		private readonly CookieContainer credentialCookies;
 
@@ -40,6 +46,19 @@ namespace ItemAnalyzer.Transport
 				throw new Exception();
 
 			return true;
+		}
+
+		public HttpWebRequest GetHttpRequest(string method, string url)
+		{
+			var request = (HttpWebRequest) HttpWebRequest.Create(url);
+
+			request.CookieContainer = credentialCookies;
+			request.UserAgent =
+				"User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E; .NET CLR 1.1.4322)";
+			request.Method = method;
+			request.ContentType = "application/x-www-form-urlencoded";
+
+			return request;
 		}
 
 		private static byte[] GetRequestData(Credentials credentials, string hashValue)
@@ -74,19 +93,6 @@ namespace ItemAnalyzer.Transport
 			{
 				return reader.ReadToEnd();
 			}
-		}
-
-		private HttpWebRequest GetHttpRequest(string method, string url)
-		{
-			var request = (HttpWebRequest) HttpWebRequest.Create(url);
-
-			request.CookieContainer = credentialCookies;
-			request.UserAgent =
-				"User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E; .NET CLR 1.1.4322)";
-			request.Method = method;
-			request.ContentType = "application/x-www-form-urlencoded";
-
-			return request;
 		}
 	}
 }
