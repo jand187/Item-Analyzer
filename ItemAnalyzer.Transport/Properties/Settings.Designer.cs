@@ -62,10 +62,22 @@ namespace ItemAnalyzer.Transport.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("name=\\\\\\\"hash\\\\\\\" value=\\\\\\\"(?<hash>[a-zA-Z0-9]{1,})\\\\\\\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("name=\\\"hash\\\" value=\\\"(?<hash>[a-zA-Z0-9]{1,})\\\"")]
         public string HashRegEx {
             get {
                 return ((string)(this["HashRegEx"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Item Analyzer\\v.1.0\\credentials.json")]
+        public string Credentials {
+            get {
+                return ((string)(this["Credentials"]));
+            }
+            set {
+                this["Credentials"] = value;
             }
         }
     }

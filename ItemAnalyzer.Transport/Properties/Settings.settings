@@ -15,7 +15,10 @@
       <Value Profile="(Default)">http://www.pathofexile.com/character-window/get-items?character={0}</Value>
     </Setting>
     <Setting Name="HashRegEx" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">name=\\\"hash\\\" value=\\\"(?&lt;hash&gt;[a-zA-Z0-9]{1,})\\\"</Value>
+      <Value Profile="(Default)">name=\"hash\" value=\"(?&lt;hash&gt;[a-zA-Z0-9]{1,})\"</Value>
+    </Setting>
+    <Setting Name="Credentials" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Item Analyzer\v.1.0\credentials.json</Value>
     </Setting>
   </Settings>
 </SettingsFile>
