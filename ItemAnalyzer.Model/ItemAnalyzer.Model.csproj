@@ -41,6 +41,13 @@
   <ItemGroup>
     <Compile Include="Credentials.cs" />
     <Compile Include="InventoryPage.cs" />
+    <Compile Include="JsonProxies\AdditionalProperty.cs" />
+    <Compile Include="JsonProxies\Colour.cs" />
+    <Compile Include="JsonProxies\Item.cs" />
+    <Compile Include="JsonProxies\Property.cs" />
+    <Compile Include="JsonProxies\Requirement.cs" />
+    <Compile Include="JsonProxies\Stash.cs" />
+    <Compile Include="JsonProxies\Tab.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
