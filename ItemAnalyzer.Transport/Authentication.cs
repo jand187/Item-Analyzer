@@ -19,14 +19,19 @@ namespace ItemAnalyzer.Transport
 	public class Authentication : IAuthentication
 	{
 		private readonly CookieContainer credentialCookies;
+		private bool isAuthenticated;
 
 		public Authentication()
 		{
 			credentialCookies = new CookieContainer();
+			isAuthenticated = false;
 		}
 
 		public bool Authenticate()
 		{
+			if (isAuthenticated)
+				return true;
+
 			var credentials = GetCredentials();
 			var hashValue = GetHash();
 
@@ -45,6 +50,7 @@ namespace ItemAnalyzer.Transport
 			if (response.StatusCode != HttpStatusCode.Found)
 				throw new Exception();
 
+			isAuthenticated = true;
 			return true;
 		}
 
