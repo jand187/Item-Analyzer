@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemAnalyzer.Transport", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemAnalyzer.Model", "ItemAnalyzer.Model\ItemAnalyzer.Model.csproj", "{4719B61B-0AA8-4BB6-A435-DBE73FF6939C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FBB7A33C-8305-44A6-BBC5-4B22ED450CE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemAnalyzer.TransportTests", "ItemAnalyzer.TransportTests\ItemAnalyzer.TransportTests.csproj", "{41B6B97F-15E1-46DB-8B3A-CB04D176261D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +31,15 @@ Global
 		{4719B61B-0AA8-4BB6-A435-DBE73FF6939C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4719B61B-0AA8-4BB6-A435-DBE73FF6939C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4719B61B-0AA8-4BB6-A435-DBE73FF6939C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41B6B97F-15E1-46DB-8B3A-CB04D176261D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41B6B97F-15E1-46DB-8B3A-CB04D176261D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41B6B97F-15E1-46DB-8B3A-CB04D176261D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41B6B97F-15E1-46DB-8B3A-CB04D176261D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{41B6B97F-15E1-46DB-8B3A-CB04D176261D} = {FBB7A33C-8305-44A6-BBC5-4B22ED450CE9}
 	EndGlobalSection
 EndGlobal
