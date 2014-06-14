@@ -51,6 +51,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SecureStringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ItemAnalyzer.Model\ItemAnalyzer.Model.csproj">
